@@ -7,8 +7,6 @@ const skillService = new SkillService();
 export const createSkill = async (req: Request, res: Response): Promise<void> => {
     try {
         const newSkillData: SkillEntity = req.body;
-        // Установка user_id из запроса
-        newSkillData.user = req.body.user_id;
         const newSkill = await skillService.createSkill(newSkillData);
         res.json(newSkill);
     } catch (error) {

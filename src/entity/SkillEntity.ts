@@ -1,27 +1,26 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn, ManyToMany, JoinTable } from "typeorm";
 import { UserEntity } from "./UserEntity";
 
-@Entity({ name: "skills" })
+// Таблица Навыков (Skills):
+// sql
+// Copy code
+// CREATE TABLE Skills (
+//     skill_id INT PRIMARY KEY AUTO_INCREMENT,
+//     skill_name VARCHAR(255) UNIQUE NOT NULL
+// );
+// Примечание:
+
+// skill_id: Уникальный идентификатор навыка.
+// skill_name: Название навыка (уникальное поле).
+
+@Entity({ name: "Skills" })
 export class SkillEntity {
 
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn({ name: "skill_id"})
+    skill_id: number;
 
-    @ManyToOne(() => UserEntity, user => user.skills, { nullable: false })
-    @JoinColumn({ name: "user_id" })
-    user: UserEntity;
-
-    @Column({ name: "skill_name", length: 255, nullable: false })
-    skillName: string;
-
-    @Column({ type: "enum", enum: ["beginner", "intermediate", "advanced", "expert"], nullable: false })
-    proficiencyLevel: string;
-
-    @CreateDateColumn({ name: "created_at" })
-    createdAt: Date;
-
-    @UpdateDateColumn({ name: "updated_at" })
-    updatedAt: Date;
+    @Column({ name: "skill_name", length: 255, unique: true, nullable: false })
+    skill_name: string;
 
 }
 

@@ -1,13 +1,11 @@
 import express from 'express';
-import { checkCredentials, createUser, getAllUsers } from '../controllers/UserController';
+import {  createUser, getAllUsers } from '../controllers/UserController';
 
 const UserRouter = express.Router();
 
 UserRouter.post('/create', createUser);
 
 UserRouter.post('/get_all', getAllUsers);
-
-UserRouter.post('/check_credentials', checkCredentials); 
 
 export default UserRouter;
 

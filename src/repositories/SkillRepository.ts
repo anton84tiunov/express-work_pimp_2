@@ -6,3 +6,7 @@ export const SkillRepository = AppDataSource.manager.getRepository(SkillEntity);
 
 
 
+
+
+
+

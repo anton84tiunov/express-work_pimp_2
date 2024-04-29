@@ -1,61 +1,45 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany, JoinColumn, ManyToOne } from "typeorm";
-import { JobEntity } from "./JobEntity";
-import { ApplicationEntity } from "./ApplicationEntity";
-import { SkillEntity } from "./SkillEntity";
-import { EducationEntity } from "./EducationEntity";
-import { CompanyEntity } from "./CompanyEntity";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany, JoinColumn, ManyToOne, ManyToMany, JoinTable } from "typeorm";
+
+// Таблица Пользователей (Users):
+// sql
+// Copy code
+// CREATE TABLE Users (
+//     user_id INT PRIMARY KEY AUTO_INCREMENT,
+//     username VARCHAR(255) NOT NULL,
+//     email VARCHAR(255) UNIQUE NOT NULL,
+//     password_hash VARCHAR(255) NOT NULL,
+//     registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+//     is_employer BOOLEAN DEFAULT FALSE
+// );
+// Примечание:
+
+// user_id: Уникальный идентификатор пользователя.
+// username: Имя пользователя.
+// email: Email пользователя (уникальное поле).
+// password_hash: Хэш пароля пользователя.
+// registration_date: Дата регистрации пользователя.
+// is_employer: Флаг, указывающий, является ли пользователь работодателем.
 
 @Entity({ name: "users" })
 export class UserEntity {
 
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn({ name: "user_id"})
+    user_id: number;
 
-    @Column({ name: "first_name", length: 255, nullable: false })
-    firstName: string;
+    @Column({ name: "username", length: 255, nullable: false, unique: true  })
+    username: string;
 
-    @Column({ name: "last_name", length: 255, nullable: false })
-    lastName: string;
-
-    @Column({ length: 255, unique: true, nullable: false })
+    @Column({ name: "email" , length: 255, nullable: false, unique: true })
     email: string;
 
-    @Column({ length: 255, nullable: false })
-    password: string;
-
-    @Column({ type: "enum", enum: ["employer", "applicant"], nullable: false })
-    role: string;
-
-    @ManyToOne(() => CompanyEntity, company => company.users, { nullable: true }) // Указываем Many-to-One связь с компанией
-    @JoinColumn({ name: "company_id" }) // Указываем имя колонки для внешнего ключа
-    company: string;
-
-    @Column({ name: "phone_number", length: 20, nullable: true })
-    phoneNumber: string;
-
-    @Column({ type: "text", nullable: true })
-    bio: string;
-
-    @Column({ name: "profile_image", length: 255, nullable: true })
-    profileImage: string;
+    @Column({ name: "password_hash", length: 255, nullable: false })
+    password_hash: string;
 
     @CreateDateColumn({ name: "created_at" })
-    createdAt: Date;
+    registration_date: Date;
 
-    @UpdateDateColumn({ name: "updated_at" })
-    updatedAt: Date;
-
-    @OneToMany(() => JobEntity, job => job.employer)
-    jobs: JobEntity[];
-
-    @OneToMany(() => ApplicationEntity, application => application.applicant)
-    applications: ApplicationEntity[];
-
-    @OneToMany(() => SkillEntity, skill => skill.user)
-    skills: SkillEntity[];
-
-    @OneToMany(() => EducationEntity, education => education.user)
-    educations: EducationEntity[];
+    @Column({ default: false })
+    is_employer: boolean;
 
 }
 

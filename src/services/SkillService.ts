@@ -11,3 +11,5 @@ export class SkillService {
         return await SkillRepository.find({ relations: ['user'] });
     }
 } 
+
+
