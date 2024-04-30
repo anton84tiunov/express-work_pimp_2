@@ -1,12 +1,12 @@
 import express from 'express';
-import MatchRouter from './routes/MatchesRouter';
-import NotificationRouter from './routes/NotificationsRouter';
-import ResumeRouter from './routes/ResumesRouter';
-import ResumeSkillsRouter from './routes/ResumeSkillsRouter';
-import SkillRouter from './routes/SkillRouter';
-import UserRouter from './routes/UserRouter';
-import VacancyRouter from './routes/VacancyRouter';
-import VacancySkillsRouter from './routes/VacancySkillsRouter';
+import MatchRouter from './api/routes/MatchesRouter';
+import NotificationRouter from './api/routes/NotificationsRouter';
+import ResumeRouter from './api/routes/ResumesRouter';
+import ResumeSkillsRouter from './api/routes/ResumeSkillsRouter';
+import SkillRouter from './api/routes/SkillRouter';
+import UserRouter from './api/routes/UserRouter';
+import VacancyRouter from './api/routes/VacancyRouter';
+import VacancySkillsRouter from './api/routes/VacancySkillsRouter';
 
 const MainRouter = express.Router();
 

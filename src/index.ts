@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import express from 'express';
-import { AppDataSource } from './app-data-source';
+import { AppDataSource } from './configs/app-data-source';
 import MainRouter from './MainRouter'; // Исправленный импорт
 
 
@@ -38,3 +38,5 @@ async function startServer() {
 }
 
 startServer(); // Запускаем сервер
+
+
