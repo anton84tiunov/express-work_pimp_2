@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { MatchService } from "../../core/services/MatchService";
-import { MatchEntity } from "../../core/entity/MatchEntity";
+import { MatchEntity } from "../../core/entities/MatchEntity";
 
 const matchService = new MatchService();
 

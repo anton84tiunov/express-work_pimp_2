@@ -1,4 +1,4 @@
-import { SkillEntity } from "../entity/SkillEntity";
+import { SkillEntity } from "../entities/SkillEntity";
 import { SkillRepository } from "../repositories/SkillRepository";
 
 

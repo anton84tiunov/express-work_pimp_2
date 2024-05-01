@@ -9,8 +9,8 @@ export const AppDataSource = new DataSource({
     password: "Qwerty123#",
     database: "db_work_pimp_2",
     synchronize: true,
-    logging: true,
-    entities: ["src/core/entity/**/*.ts" ],
+    logging: ["query", "error", "schema"],
+    entities: ["src/core/entities/**/*.ts" ],
     migrations: ["src/migration/**/*.ts"],
     subscribers: ["src/subscriber/**/*.ts"],
     

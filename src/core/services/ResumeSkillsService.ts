@@ -1,4 +1,4 @@
-import { ResumeSkillsEntity } from "../entity/ResumeSkillsEntity";
+import { ResumeSkillsEntity } from "../entities/ResumeSkillsEntity";
 import { ResumeSkillsRepository } from "../repositories/ResumeSkillsRepository";
 
 export class ResumeSkillsService {

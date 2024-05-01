@@ -1,7 +1,7 @@
 // ApplicationController.ts
 import { Request, Response } from 'express';
 import { ApplicationService } from '../../core/services/ApplicationService';
-import { ApplicationEntity } from '../../core/entity/ApplicationEntity'; 
+import { ApplicationEntity } from '../../core/entities/ApplicationEntity'; 
 
 const applicationService = new ApplicationService();
 

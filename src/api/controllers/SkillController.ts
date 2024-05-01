@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { SkillService } from "../../core/services/SkillService";
-import { SkillEntity } from "../../core/entity/SkillEntity";
+import { SkillEntity } from "../../core/entities/SkillEntity";
 
 const skillService = new SkillService();
 

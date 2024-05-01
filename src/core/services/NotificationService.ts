@@ -1,4 +1,4 @@
-import { NotificationEntity } from "../entity/NotificationEntity";
+import { NotificationEntity } from "../entities/NotificationEntity";
 import { NotificationRepository } from "../repositories/NotificationRepository";
 
 export class NotificationService{

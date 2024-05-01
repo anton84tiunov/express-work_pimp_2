@@ -1,4 +1,4 @@
-import { VacancyEntity } from "../entity/VacancyEntity";
+import { VacancyEntity } from "../entities/VacancyEntity";
 import { VacancyRepository } from "../repositories/VacancyRepository";
 
 export class VacancyService {

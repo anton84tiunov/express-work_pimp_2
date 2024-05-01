@@ -1,5 +1,5 @@
 // ApplicationService.ts
-import { ApplicationEntity } from '../entity/ApplicationEntity';
+import { ApplicationEntity } from '../entities/ApplicationEntity';
 import { ApplicationRepository } from '../repositories/ApplicationRepository';
 
 export class ApplicationService {

@@ -1,4 +1,4 @@
-import { MatchEntity } from "../entity/MatchEntity";
+import { MatchEntity } from "../entities/MatchEntity";
 import { MatchRepository } from "../repositories/MatchRepository";
 
 

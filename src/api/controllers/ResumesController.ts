@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { ResumeService } from "../../core/services/ResumeService";
-import { ResumeEntity } from "../../core/entity/ResumeEntity";
+import { ResumeEntity } from "../../core/entities/ResumeEntity";
 
 const resumeService = new ResumeService();
 

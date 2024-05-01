@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { ResumeSkillsService } from "../../core/services/ResumeSkillsService";
-import { ResumeSkillsEntity } from "../../core/entity/ResumeSkillsEntity";
+import { ResumeSkillsEntity } from "../../core/entities/ResumeSkillsEntity";
 
 const resumeSkillsService = new ResumeSkillsService();
 

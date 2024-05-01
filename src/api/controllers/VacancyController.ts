@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { VacancyService } from "../../core/services/VacancyService";
-import { VacancyEntity } from "../../core/entity/VacancyEntity";
+import { VacancyEntity } from "../../core/entities/VacancyEntity";
 
 const vacancyService = new VacancyService();
 

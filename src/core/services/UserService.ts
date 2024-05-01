@@ -1,5 +1,5 @@
 import { UserRepository } from "../repositories/UserRepository";
-import { UserEntity } from "../entity/UserEntity";
+import { UserEntity } from "../entities/UserEntity";
 
 export class UserService {
 
@@ -11,3 +11,9 @@ export class UserService {
         return await UserRepository.find();
     }
 }
+
+
+
+
+
+

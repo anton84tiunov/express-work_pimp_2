@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { NotificationService } from "../../core/services/NotificationService";
-import { NotificationEntity } from "../../core/entity/NotificationEntity";
+import { NotificationEntity } from "../../core/entities/NotificationEntity";
 
 const notificationService = new NotificationService();
 

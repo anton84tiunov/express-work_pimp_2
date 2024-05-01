@@ -1,5 +1,5 @@
 import { AppDataSource } from '../../configs/app-data-source';
-import { VacancySkillsEntity } from '../entity/VacancySkillsEntity';
+import { VacancySkillsEntity } from '../entities/VacancySkillsEntity';
 
 export const VacancySkillsRepository = AppDataSource.manager.getRepository(VacancySkillsEntity);
 
