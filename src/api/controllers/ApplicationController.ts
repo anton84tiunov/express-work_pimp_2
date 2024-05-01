@@ -24,3 +24,5 @@ export const getAllApplications = async (req: Request, res: Response): Promise<v
     res.status(500).json({ error: 'Ошибка при получении заявок' });
   }
 };
+
+// git clone https://github.com/anton84tiunov/express-work_pimp_2.git

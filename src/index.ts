@@ -2,7 +2,7 @@ import "reflect-metadata";
 import express from 'express';
 import { AppDataSource } from './configs/app-data-source';
 import MainRouter from './MainRouter'; // Исправленный импорт
-
+import logger from './configs/logger';
 
 
 
@@ -10,11 +10,11 @@ async function startServer() {
     try {
         await AppDataSource.initialize(); // Инициализируем источник данных
         console.log('Источник данных успешно инициализирован');
+        logger.info('Источник данных успешно инициализирован');
 
         const app = express();
 
        
-
         app.use(express.json());
         console.log('app.use(express.json());');
 
