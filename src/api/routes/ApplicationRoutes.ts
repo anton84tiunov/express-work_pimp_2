@@ -1,6 +1,6 @@
 // ApplicationRoutes.ts
 import express from 'express';
-import { createApplication, getAllApplications } from '../controllers/ApplicationController'
+import { createApplication, getAllApplications } from '../controllers/applications/ApplicationController'
 
 const ApplicationRouter = express.Router();
 

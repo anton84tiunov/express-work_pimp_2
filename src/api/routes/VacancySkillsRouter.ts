@@ -1,5 +1,5 @@
 import express from 'express';
-import {createVacancySkills, getAllVacancySkills} from '../controllers/VacancySkillsController';
+import {createVacancySkills, getAllVacancySkills} from '../controllers/vacancySkills/VacancySkillsController';
 
 const VacancySkillsRouter = express.Router();
 

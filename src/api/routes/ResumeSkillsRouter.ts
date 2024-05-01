@@ -1,5 +1,5 @@
 import express from 'express';
-import {createResumeSkills, getAllResumeSkills} from '../controllers/ResumeSkillsController';
+import {createResumeSkills, getAllResumeSkills} from '../controllers/resumeSkills/ResumeSkillsController';
 
 const ResumeSkillsRouter = express.Router();
 

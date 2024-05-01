@@ -1,5 +1,5 @@
 import express from 'express';
-import {createResume, getAllResume} from '../controllers/ResumesController';
+import {createResume, getAllResume} from '../controllers/resumes/ResumesController';
 
 const ResumeRouter = express.Router();
 

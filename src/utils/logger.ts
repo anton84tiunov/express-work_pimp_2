@@ -1,8 +1,14 @@
-import winston from 'winston';
+import winston, { format } from 'winston';
 
 const logger = winston.createLogger({
   level: 'info',
-  format: winston.format.json(),
+  format: format.combine(
+    format.label({ label: 'your-service' }),
+    format.timestamp(),
+    format.printf(({ level, message, label, timestamp, file, line }) => {
+      return `${timestamp} [${label}] ${file}:${line} ${level}: ${message}`;
+    })
+  ),
   defaultMeta: { service: 'your-service' },
   transports: [
     new winston.transports.Console(),
