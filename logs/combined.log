@@ -2,3 +2,8 @@
 {"level":"info","message":"Источник данных успешно инициализирован","service":"your-service"}
 {"level":"info","message":"Источник данных успешно инициализирован","service":"your-service"}
 {"level":"info","message":"Источник данных успешно инициализирован","service":"your-service"}
+2024-05-01T08:29:02.655Z [your-service] undefined:undefined info: Источник данных успешно инициализирован
+2024-05-01T08:41:21.170Z [your-service] undefined:undefined info: Источник данных успешно инициализирован
+2024-05-01T08:56:06.708Z [your-service] /home/anton/my_projects/NODE_JS/TS/TESTS/work_pimp_2/BACKEND/node_modules/logform/combine.js:20 info: Источник данных успешно инициализирован
+2024-05-01T09:06:34.904Z [your-service] /home/anton/my_projects/NODE_JS/TS/TESTS/work_pimp_2/BACKEND/src/utils/logger.ts:34 info: Источник данных успешно инициализирован
+2024-05-01T09:59:05.948Z [your-service] /home/anton/my_projects/NODE_JS/TS/TESTS/work_pimp_2/BACKEND/src/utils/logger.ts:34 info: Источник данных успешно инициализирован
